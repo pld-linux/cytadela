@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Cytadela
+Comment=A conversion of an Amiga Doom clone "Cytadela"
+Comment[pl]=Konwersja amigowego klona gry Doom "Cytadela"
+Icon=cytadela.xpm
+Exec=cytadela
+Terminal=false
+Type=Application
+Categories=Game;X-FPPGame;
+Encoding=UTF-8
+# vi: encoding=utf-8
