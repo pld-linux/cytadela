@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/cytadela/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-useless_files.patch
 URL:		http://sourceforge.net/projects/cytadela/
-BuildRequires:	OpenGL-GLU
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
