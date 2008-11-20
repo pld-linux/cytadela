@@ -8,7 +8,6 @@ Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/cytadela/%{name}-%{version}.tar.bz2
 # Source0-md5:	fc22f35c58d3429a9c449ceda151f9e3
 Source1:	%{name}.desktop
-Patch0:		%{name}-useless_files.patch
 URL:		http://sourceforge.net/projects/cytadela/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
@@ -37,7 +36,6 @@ poprawienia kilku błędów.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -61,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README data/doc/{*.html,*.txt}
+%doc AUTHORS ChangeLog NEWS README data/doc/*.html
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
