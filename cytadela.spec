@@ -1,20 +1,20 @@
 Summary:	A conversion of an Amiga Doom clone "Cytadela"
 Summary(pl.UTF-8):	Konwersja amigowego klona gry Doom "Cytadela"
 Name:		cytadela
-Version:	0.9
+Version:	1.0.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/cytadela/%{name}_%{version}.tar.bz2
-# Source0-md5:	d9a8c70273f5ecb9841920182214e105
+Source0:	http://downloads.sourceforge.net/cytadela/%{name}-%{version}.tar.bz2
+# Source0-md5:	c1c664e4b73ce23c701e01a826f27ae4
 Source1:	%{name}.desktop
-Patch0:		%{name}-data.patch
 URL:		http://sourceforge.net/projects/cytadela/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	vlc-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,17 +27,15 @@ order to make them easier to use with the conversion and to correct
 some bugs.
 
 %description -l pl.UTF-8
-Cytadela jest konwersją amigowej gry pod tym samym tytułem,
-stworzonej przez grupę Virtual Design. W konwersji wykorzystanych
-jest kilka algorytmów pochodzących z oryginału. Cała muzyka,
-większość grafiki, wszystkie dźwięki i poziomy pochodzą z wersji
-oryginalnej, ale w niektórych przypadkach zostały przetworzone i/lub
-zmodyfikowane w celu ułatwienia wykorzystania ich w konwersji i
-poprawienia kilku błędów.
+Cytadela jest konwersją amigowej gry o tym samym tytule, stworzonej
+przez grupę Virtual Design. W konwersji wykorzystanych jest kilka
+algorytmów pochodzących z oryginału. Cała muzyka, większość grafiki,
+wszystkie dźwięki i poziomy pochodzą z wersji oryginalnej, ale w
+niektórych przypadkach zostały przetworzone i/lub zmodyfikowane w celu
+ułatwienia wykorzystania ich w konwersji i poprawienia kilku błędów.
 
 %prep
-%setup -q -n %{name}
-%patch0 -p1
+%setup -q
 
 %build
 %{__aclocal}
