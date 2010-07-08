@@ -1,12 +1,12 @@
 Summary:	A conversion of an Amiga Doom clone "Cytadela"
 Summary(pl.UTF-8):	Konwersja amigowego klona gry Doom "Cytadela"
 Name:		cytadela
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/cytadela/%{name}-%{version}.tar.bz2
-# Source0-md5:	c1c664e4b73ce23c701e01a826f27ae4
+# Source0-md5:	f9d47dc417ab306674074ac730c34032
 Source1:	%{name}.desktop
 URL:		http://sourceforge.net/projects/cytadela/
 BuildRequires:	OpenGL-GLU-devel
@@ -14,7 +14,7 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	vlc-devel
+BuildRequires:	vlc-devel >= 1.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
